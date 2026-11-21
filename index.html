@@ -7,254 +7,418 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    overflow-x:hidden;
-    color:white;
-    text-align:center;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+overflow-x:hidden;
+text-align:center;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
 }
 
 h1{
-    font-family:'Dancing Script',cursive;
-    font-size:4rem;
-    margin-bottom:10px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow{
-    from{ text-shadow:0 0 10px #fff; }
-    to{ text-shadow:0 0 30px #fff,0 0 50px #ffebee; }
+font-family:'Dancing Script',cursive;
+font-size:4rem;
+margin-bottom:20px;
+text-shadow:0 0 20px rgba(255,255,255,0.7);
 }
 
 .subtitle{
-    font-size:1.2rem;
-    max-width:700px;
-    margin-bottom:25px;
+max-width:800px;
+font-size:1.3rem;
+line-height:1.8;
 }
 
-.btn{
-    padding:15px 30px;
-    border:none;
-    border-radius:30px;
-    font-size:1rem;
-    background:white;
-    color:#ff4f87;
-    cursor:pointer;
-    font-weight:bold;
-    transition:0.3s;
+.btn,.love-button{
+padding:15px 30px;
+margin-top:20px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4f87;
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
-.btn:hover{
-    transform:scale(1.08);
+.btn:hover,
+.love-button:hover{
+transform:scale(1.07);
 }
 
 .message-box{
-    max-width:800px;
-    margin:100px auto;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+padding:30px;
+margin:40px auto;
+max-width:900px;
+border-radius:25px;
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
-.message-box h2{
-    margin-bottom:20px;
-}
-
-.message{
-    font-size:1.1rem;
-    line-height:1.8;
+.timeline{
+text-align:left;
+line-height:2;
 }
 
 .hidden{
-    display:none;
+display:none;
 }
 
-.count-love{
-    margin-top:25px;
-    font-size:1.3rem;
-    font-weight:bold;
-}
-
-.memory{
-    padding:80px 20px;
-}
-
-.memory h2{
-    margin-bottom:20px;
-}
-
-.card{
-    background:rgba(255,255,255,0.15);
-    width:300px;
-    margin:auto;
-    padding:25px;
-    border-radius:20px;
+#counter{
+margin-top:15px;
+font-size:22px;
+font-weight:bold;
 }
 
 footer{
-    padding:40px 20px;
+padding:50px;
+font-size:18px;
 }
 
 .heart{
-    position:fixed;
-    top:-10px;
-    color:white;
-    animation:fall linear forwards;
-    pointer-events:none;
+position:fixed;
+top:-10px;
+pointer-events:none;
+animation:fall linear forwards;
+z-index:999;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh);
-    }
+to{
+transform:translateY(110vh);
+}
 }
 
-.love-button{
-    background:#fff;
-    color:#ff4081;
-    margin-top:20px;
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-#surpriseMessage{
-    margin-top:20px;
-    font-size:1.3rem;
-    display:none;
-}
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>Happy Birthday ❤️</h1>
-    <p class="subtitle">
-        To the most beautiful soul in my life.
-        Today is all about celebrating you and the happiness you bring to my world.
-    </p>
 
-    <button class="btn" onclick="openLetter()">
-        Open Your Birthday Letter 💌
-    </button>
+<h1>Happy Birthday HER_NAME ❤️</h1>
+
+<p class="subtitle">
+
+Some stories begin with a hello.
+
+Ours began with a glance in Sari Village, Uttarakhand on 19 November 2021.
+
+Little did I know that the girl I saw that day would become the most beautiful chapter of my life.
+
+❤️
+
+</p>
+
+<button class="btn" onclick="openLetter()">
+Open My Heart ❤️
+</button>
+
 </section>
 
 <section id="letter" class="message-box hidden">
-    <h2>My Dearest Love ❤️</h2>
 
-    <p class="message">
-        Happy Birthday, my love.<br><br>
+<h2>🎂❤️ Happy Birthday, My Love ❤️🎂</h2>
 
-        Every day with you feels special, but today is even more special because
-        it's the day the world received the most amazing person I know.
+<p style="line-height:2">
 
-        Thank you for your smile, your kindness, your support, and for making
-        life brighter in countless ways.
+Every moment with you is special, and I feel incredibly lucky to have you by my side.
 
-        I may not always find the perfect words, but I hope you always know how
-        deeply you are loved and appreciated.
+When I first saw you on 19 November 2021 in Sari Village, I had no idea that one day you would become such an important part of my life.
 
-        I wish you endless happiness, success, laughter, and beautiful memories.
-        May all your dreams come true this year.
+From our first conversation on 6 December 2021, to our first call on 4 January 2022, every step of our journey has become a memory that I treasure.
 
-        Today and always, you have my heart. ❤️
-    </p>
+You moved to London in September 2020.
 
-    <div class="count-love">
-        You have been loved...
-        <div id="counter"></div>
-    </div>
+Years later, in September 2023, I moved to London for university.
 
-    <button class="love-button" onclick="showSurprise()">
-        Click For A Surprise 🎁
-    </button>
+At that time you were living in Belfast.
 
-    <div id="surpriseMessage">
-        💖 I Love You More Every Single Day 💖
-    </div>
+One of the greatest gifts you've ever given me was choosing to move back to London so we could be together.
+
+That sacrifice meant more to me than words can ever explain.
+
+I hope this year brings you endless happiness, success, good health, and all the beautiful things you deserve.
+
+May your smile always shine as brightly as it does today.
+
+No matter where life takes us, I'll always cherish every memory we've made and look forward to creating countless more together.
+
+Happy Birthday, sweetheart! 🎉🎁💖
+
+I love you more than words can say. ❤️
+
+</p>
+
+<br>
+
+<h3>❤️ Days Since Our First Call ❤️</h3>
+
+<div id="counter"></div>
+
 </section>
 
-<section class="memory">
-    <h2>Reasons Why You're Amazing 🌹</h2>
+<section class="message-box">
 
-    <div class="card">
-        ❤️ Your Smile<br><br>
-        ❤️ Your Kind Heart<br><br>
-        ❤️ Your Beautiful Soul<br><br>
-        ❤️ The Happiness You Bring<br><br>
-        ❤️ Simply Being You
-    </div>
+<h2>🌹 The Story Of Us 🌹</h2>
+
+<div class="timeline">
+
+<p>
+🇬🇧 <strong>September 2020</strong><br>
+You moved to London.
+Neither of us knew our paths would one day cross.
+</p>
+
+<p>
+🌿 <strong>19 November 2021</strong><br>
+Sari Village, Uttarakhand.
+The first time I saw you.
+The beginning of a story I didn't even know I was living.
+</p>
+
+<p>
+💬 <strong>6 December 2021</strong><br>
+We started talking.
+Slowly your messages became the best part of my day.
+</p>
+
+<p>
+📞 <strong>4 January 2022</strong><br>
+Our first call.
+The day your voice became one of my favourite sounds.
+</p>
+
+<p>
+🎓 <strong>September 2023</strong><br>
+I moved to London for university.
+You were living in Belfast.
+</p>
+
+<p>
+❤️ <strong>The Moment I Knew</strong><br>
+You chose to move back to London so we could be together.
+
+Not because you had to.
+
+Because you chose us.
+
+That gift will stay in my heart forever.
+</p>
+
+<p>
+✨ <strong>Today</strong><br>
+After all these years, you're still my favourite notification, favourite smile and favourite person.
+</p>
+
+</div>
+
+</section>
+
+<section class="message-box">
+
+<h2>💕 Why I Love You 💕</h2>
+
+<button class="love-button" onclick="newReason()">
+Tell Me ❤️
+</button>
+
+<h3 id="reason" style="margin-top:20px;"></h3>
+
+</section>
+
+<section class="message-box">
+
+<h2>💭 What If?</h2>
+
+<button class="love-button" onclick="showAnswer()">
+Reveal ❤️
+</button>
+
+<h3 id="answer" style="margin-top:25px;"></h3>
+
+</section>
+
+<section class="message-box">
+
+<h2>🎁 Memory Challenge 🎁</h2>
+
+<p>When was our first phone call?</p>
+
+<br>
+
+<button class="love-button" onclick="wrong()">
+4 February 2022
+</button>
+
+<button class="love-button" onclick="correct()">
+4 January 2022
+</button>
+
+<h3 id="quiz" style="margin-top:20px;"></h3>
+
+</section>
+
+<section class="message-box">
+
+<h2>🎆 Final Birthday Surprise 🎆</h2>
+
+<button class="love-button" onclick="finalWish()">
+Open Surprise ❤️
+</button>
+
+<h2 id="finalText" style="margin-top:25px;"></h2>
+
 </section>
 
 <footer>
-    Made with ❤️ just for you.
+
+Made with ❤️ for HER_NAME
+
 </footer>
 
 <script>
+
 function openLetter(){
-    document.getElementById("letter").classList.remove("hidden");
-    document.getElementById("letter").scrollIntoView({
-        behavior:"smooth"
-    });
+
+document.getElementById("letter")
+.classList.remove("hidden");
+
+document.getElementById("letter")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+confetti({
+particleCount:200,
+spread:180
+});
 }
 
-function showSurprise(){
-    document.getElementById("surpriseMessage").style.display="block";
+const reasons = [
+
+"Your smile lights up my day ❤️",
+"Your kindness inspires me ❤️",
+"Because life is better with you ❤️",
+"Your support means the world to me ❤️",
+"Because you chose us ❤️",
+"Because there is nobody else like you ❤️",
+"You're my favourite person ❤️"
+
+];
+
+function newReason(){
+
+let random =
+reasons[Math.floor(Math.random()*reasons.length)];
+
+document.getElementById("reason").innerHTML =
+random;
+
 }
 
-const startDate = new Date("2025-01-01");
+function showAnswer(){
+
+document.getElementById("answer").innerHTML =
+
+"What if I never went to Sari Village on 19 November 2021? What if we never started talking on 6 December? What if we never had that first call on 4 January? Then I would have missed the most beautiful person and the most beautiful chapter of my life. ❤️";
+
+}
+
+function correct(){
+
+document.getElementById("quiz").innerHTML =
+"✅ Correct! One of the most important days of my life ❤️";
+
+}
+
+function wrong(){
+
+document.getElementById("quiz").innerHTML =
+"❌ Nice try 😄 It was 4 January 2022 ❤️";
+
+}
+
+function finalWish(){
+
+document.getElementById("finalText").innerHTML =
+
+"Out of all the moments in my life, seeing you in Sari Village on 19 November 2021 was the moment that changed everything. Thank you for choosing us. Thank you for choosing London. Thank you for choosing me. Happy Birthday My Love ❤️";
+
+confetti({
+particleCount:500,
+spread:250
+});
+
+}
+
+const firstCall = new Date("2022-01-04");
 
 function updateCounter(){
-    const now = new Date();
-    const diff = now - startDate;
 
-    const days = Math.floor(diff/(1000*60*60*24));
+const now = new Date();
 
-    document.getElementById("counter").innerHTML =
-    days + " days and counting ❤️";
+const diff = now - firstCall;
+
+const days =
+Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("counter").innerHTML =
+days + " beautiful days ❤️";
+
 }
 
 setInterval(updateCounter,1000);
 updateCounter();
 
 function createHeart(){
-    const heart=document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML="❤️";
 
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*20+15)+"px";
-    heart.style.animationDuration=(Math.random()*4+3)+"s";
+const heart =
+document.createElement("div");
 
-    document.body.appendChild(heart);
+heart.classList.add("heart");
 
-    setTimeout(()=>{
-        heart.remove();
-    },7000);
+heart.innerHTML="❤️";
+
+heart.style.left =
+Math.random()*100+"vw";
+
+heart.style.fontSize =
+(Math.random()*25+15)+"px";
+
+heart.style.animationDuration =
+(Math.random()*6+4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
 }
 
-setInterval(createHeart,300);
+setInterval(createHeart,400);
+
 </script>
 
 </body>
