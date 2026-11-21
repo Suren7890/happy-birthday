@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    overflow-x:hidden;
+    color:white;
+    text-align:center;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:4rem;
+    margin-bottom:10px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #fff; }
+    to{ text-shadow:0 0 30px #fff,0 0 50px #ffebee; }
+}
+
+.subtitle{
+    font-size:1.2rem;
+    max-width:700px;
+    margin-bottom:25px;
+}
+
+.btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:1rem;
+    background:white;
+    color:#ff4f87;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+.message-box{
+    max-width:800px;
+    margin:100px auto;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+}
+
+.message-box h2{
+    margin-bottom:20px;
+}
+
+.message{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.hidden{
+    display:none;
+}
+
+.count-love{
+    margin-top:25px;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.memory{
+    padding:80px 20px;
+}
+
+.memory h2{
+    margin-bottom:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    width:300px;
+    margin:auto;
+    padding:25px;
+    border-radius:20px;
+}
+
+footer{
+    padding:40px 20px;
+}
+
+.heart{
+    position:fixed;
+    top:-10px;
+    color:white;
+    animation:fall linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
+}
+
+.love-button{
+    background:#fff;
+    color:#ff4081;
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#surpriseMessage{
+    margin-top:20px;
+    font-size:1.3rem;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Happy Birthday ❤️</h1>
+    <p class="subtitle">
+        To the most beautiful soul in my life.
+        Today is all about celebrating you and the happiness you bring to my world.
+    </p>
+
+    <button class="btn" onclick="openLetter()">
+        Open Your Birthday Letter 💌
+    </button>
+</section>
+
+<section id="letter" class="message-box hidden">
+    <h2>My Dearest Love ❤️</h2>
+
+    <p class="message">
+        Happy Birthday, my love.<br><br>
+
+        Every day with you feels special, but today is even more special because
+        it's the day the world received the most amazing person I know.
+
+        Thank you for your smile, your kindness, your support, and for making
+        life brighter in countless ways.
+
+        I may not always find the perfect words, but I hope you always know how
+        deeply you are loved and appreciated.
+
+        I wish you endless happiness, success, laughter, and beautiful memories.
+        May all your dreams come true this year.
+
+        Today and always, you have my heart. ❤️
+    </p>
+
+    <div class="count-love">
+        You have been loved...
+        <div id="counter"></div>
+    </div>
+
+    <button class="love-button" onclick="showSurprise()">
+        Click For A Surprise 🎁
+    </button>
+
+    <div id="surpriseMessage">
+        💖 I Love You More Every Single Day 💖
+    </div>
+</section>
+
+<section class="memory">
+    <h2>Reasons Why You're Amazing 🌹</h2>
+
+    <div class="card">
+        ❤️ Your Smile<br><br>
+        ❤️ Your Kind Heart<br><br>
+        ❤️ Your Beautiful Soul<br><br>
+        ❤️ The Happiness You Bring<br><br>
+        ❤️ Simply Being You
+    </div>
+</section>
+
+<footer>
+    Made with ❤️ just for you.
+</footer>
+
+<script>
+function openLetter(){
+    document.getElementById("letter").classList.remove("hidden");
+    document.getElementById("letter").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+function showSurprise(){
+    document.getElementById("surpriseMessage").style.display="block";
+}
+
+const startDate = new Date("2025-01-01");
+
+function updateCounter(){
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff/(1000*60*60*24));
+
+    document.getElementById("counter").innerHTML =
+    days + " days and counting ❤️";
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+15)+"px";
+    heart.style.animationDuration=(Math.random()*4+3)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },7000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
