@@ -237,46 +237,6 @@ After all these years, you're still my favourite notification, favourite smile a
 
 <section class="message-box">
 
-<h2>💕 Why I Love You 💕</h2>
-
-<button class="love-button" onclick="newReason()">
-Tell Me ❤️
-</button>
-
-<h3 id="reason" style="margin-top:20px;"></h3>
-
-</section>
-
-<section class="message-box">
-
-<h2>💭 What If?</h2>
-
-<button class="love-button" onclick="showAnswer()">
-Reveal ❤️
-</button>
-
-<h3 id="answer" style="margin-top:25px;"></h3>
-
-</section>
-
-<section class="message-box">
-
-<h2>🎁 Memory Challenge 🎁</h2>
-
-<p>When was our first phone call?</p>
-
-<br>
-
-<button class="love-button" onclick="wrong()">
-4 February 2022
-</button>
-
-<button class="love-button" onclick="correct()">
-4 January 2022
-</button>
-
-<h3 id="quiz" style="margin-top:20px;"></h3>
-
 </section>
 
 <section class="message-box">
@@ -325,39 +285,6 @@ const reasons = [
 "Because there is nobody else like you ❤️",
 "You're my favourite person ❤️"
 
-];
-
-function newReason(){
-
-let random =
-reasons[Math.floor(Math.random()*reasons.length)];
-
-document.getElementById("reason").innerHTML =
-random;
-
-}
-
-function showAnswer(){
-
-document.getElementById("answer").innerHTML =
-
-"What if I never went to Sari Village on 19 November 2021? What if we never started talking on 6 December? What if we never had that first call on 4 January? Then I would have missed the most beautiful person and the most beautiful chapter of my life. ❤️";
-
-}
-
-function correct(){
-
-document.getElementById("quiz").innerHTML =
-"✅ Correct! One of the most important days of my life ❤️";
-
-}
-
-function wrong(){
-
-document.getElementById("quiz").innerHTML =
-"❌ Nice try 😄 It was 4 January 2022 ❤️";
-
-}
 
 function finalWish(){
 
