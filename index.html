@@ -1,9 +1,26 @@
-<div id="intro">
-    <div class="intro-content">
-        <div class="intro-small">A LOVE STORY FOR</div>
-        <div class="intro-name">HER_NAME ❤️</div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#0f0f0f,#3a1f2f,#ff6b9d);
+color:white;
+overflow-x:hidden;
+}
+
 #intro{
 position:fixed;
 top:0;
@@ -14,33 +31,103 @@ background:black;
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:99999;
-animation:introFade 5s forwards;
+z-index:9999;
+animation:introFade 4s forwards;
 }
 
-.intro-content{
-text-align:center;
-}
-
-.intro-small{
-letter-spacing:10px;
-font-size:1rem;
-opacity:.7;
-}
-
-.intro-name{
-font-family:'Playfair Display',serif;
+#intro h1{
 font-size:4rem;
-margin-top:20px;
+font-family:'Playfair Display',serif;
 }
 
 @keyframes introFade{
 0%{opacity:1;}
-85%{opacity:1;}
+80%{opacity:1;}
 100%{
 opacity:0;
 visibility:hidden;
 }
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+}
+
+.hero h1{
+font-size:4rem;
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+font-size:1.2rem;
+line-height:2;
+}
+
+.section{
+padding:100px 20px;
+display:flex;
+justify-content:center;
+}
+
+.card{
+max-width:900px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:50px;
+border-radius:25px;
+opacity:0;
+transform:translateY(80px);
+transition:all 1.2s ease;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card h2{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.card p{
+line-height:2;
+font-size:1.1rem;
+}
+
+.quote{
+padding:120px 30px;
+font-family:'Playfair Display',serif;
+font-size:2rem;
+text-align:center;
+opacity:0.85;
+}
+
+.counter{
+font-size:2rem;
+margin-top:20px;
+font-weight:bold;
+}
+
+.final{
+background:black;
+padding:120px 20px;
+text-align:center;
+}
+
+.final h1{
+font-size:4rem;
+margin-bottom:20px;
+font-family:'Playfair Display',serif;
 }
 
 body::before{
@@ -51,12 +138,40 @@ left:0;
 width:100%;
 height:100%;
 background-image:
-radial-gradient(white 1px,transparent 1px);
-background-size:60px 60px;
-opacity:.06;
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:.08;
 pointer-events:none;
-z-index:-1;
 }
+
+.heart{
+position:fixed;
+top:-20px;
+pointer-events:none;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+<h1>For HER_NAME ❤️</h1>
+</div>
+
+<section class="hero">
+
+<h1>Happy Birthday HER_NAME ❤️</h1>
+
+<p>
+
 Every story begins somewhere.
 
 Ours began in the mountains of Uttarakhand.
@@ -65,73 +180,187 @@ A moment neither of us thought much about.
 
 A moment that quietly changed everything.
 
-A glance became a conversation.
+And before I knew it, you became my favourite chapter.
 
-A conversation became a phone call.
+</p>
 
-A phone call became memories.
+</section>
 
-And those memories became the most beautiful chapter of my life.
- Sari Village
- <h2>
-Chapter I
-<br><br>
-🌿 Sari Village
-</h2>
-Chapter II - Messages
-Chapter III - First Call
-Chapter IV - Mysuru
-Chapter V - Hyderabad
-Chapter VI - London
-Chapter VII - Time
-Chapter VIII - Happy Birthday
-<div class="quote">
+<section class="section">
+<div class="card">
 
-"Sometimes the most important moments
-don't feel important at the time."
+<h2>Chapter I - Sari Village 🌿</h2>
+
+<p>
+
+19 November 2021.
+
+Sari Village, Uttarakhand.
+
+Among the mountains and trails, I saw you for the first time.
+
+At that moment, it felt ordinary.
+
+Looking back today, it was the beginning of everything.
+
+</p>
 
 </div>
-.quote{
-padding:120px 40px;
-font-size:2rem;
-font-family:'Playfair Display',serif;
-text-align:center;
-opacity:.85;
-}
-.card{
-opacity:0;
-transform:translateY(100px);
-transition:all 1.5s ease;
-}
+</section>
 
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-const observer =
-new IntersectionObserver(entries=>{
+<div class="quote">
+"Sometimes the most important moments don't feel important at the time."
+</div>
 
-entries.forEach(entry=>{
+<section class="section">
+<div class="card">
 
-if(entry.isIntersecting){
+<h2>Chapter II - Messages 💬</h2>
 
-entry.target.classList.add("show");
+<p>
 
-}
+6 December 2021.
 
-});
+We started talking.
 
-},{
-threshold:0.20
-});
+Simple conversations slowly became the best part of my day.
 
-document.querySelectorAll(".card")
-.forEach(card=>{
-observer.observe(card);
-});
-Of all the villages in Uttarakhand...
+</p>
 
-Of all the cities in India...
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>Chapter III - First Call 📞</h2>
+
+<p>
+
+4 January 2022.
+
+One phone call.
+
+One evening.
+
+One memory I'll never forget.
+
+Because your voice started feeling like home.
+
+</p>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>Chapter IV - Mysuru ❤️</h2>
+
+<p>
+
+Then came Mysuru.
+
+Our first week together.
+
+No distance.
+
+No waiting.
+
+Just us creating memories together.
+
+Whenever I think about Mysuru, I don't think about a city.
+
+I think about us.
+
+</p>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>Chapter V - Hyderabad 🏙️</h2>
+
+<p>
+
+Then you came to Hyderabad.
+
+My home.
+
+My city.
+
+Everything felt more beautiful because you were there.
+
+</p>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>Chapter VI - London 🇬🇧</h2>
+
+<p>
+
+Life eventually brought us to London.
+
+A city filled with millions of people.
+
+Yet the only person that mattered was already there.
+
+</p>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>⏳ Days Since Our First Call</h2>
+
+<div id="counter" class="counter">
+Loading...
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+
+<h2>🎂 Happy Birthday My Love ❤️</h2>
+
+<p>
+
+Every moment with you is special.
+
+I feel incredibly lucky to have you by my side.
+
+Thank you for every message.
+
+Every call.
+
+Every memory.
+
+And every beautiful chapter we've written together.
+
+I love you more than words can say.
+
+❤️
+
+</p>
+
+</div>
+</section>
+
+<div class="final">
+
+<h1>❤️</h1>
+
+<p>
 
 Of all the roads life could have taken...
 
@@ -148,8 +377,6 @@ To London.
 Every chapter became my favourite because you were in it.
 
 Happy Birthday My Love.
-
-And if life gave me another chance to start over...
 
 I would still choose you.
 
@@ -168,3 +395,76 @@ And again.
 <br><br>
 
 Because our best chapters haven't happened yet.
+
+</p>
+
+</div>
+
+<script>
+
+const firstCall = new Date("2022-01-04");
+
+function updateCounter(){
+
+const now = new Date();
+
+const diff = now-firstCall;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("counter").innerHTML =
+days + " Beautiful Days ❤️";
+
+}
+
+updateCounter();
+
+setInterval(updateCounter,60000);
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+heart.style.animationDuration=
+(Math.random()*5+4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},9000);
+
+}
+
+setInterval(createHeart,500);
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card")
+.forEach(card=>observer.observe(card));
+
+</script>
+
+</body>
+</html>
