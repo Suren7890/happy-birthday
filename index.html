@@ -1,376 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday My Love ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#ff85a2,#ff6699,#ff4d88);
-color:white;
-overflow-x:hidden;
-}
-
-.section{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:60px 20px;
-text-align:center;
-}
-
-.hero{
-background:linear-gradient(to bottom,#ff6b9d,#ff4f87);
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:5rem;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.3rem;
-max-width:800px;
-line-height:1.8;
-}
-
-.story{
-max-width:900px;
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(12px);
-padding:40px;
-border-radius:25px;
-margin:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
-
-.story h2{
-font-family:'Playfair Display',serif;
-font-size:2.5rem;
-margin-bottom:20px;
-}
-
-.story p{
-line-height:2;
-font-size:1.1rem;
-}
-
-.counter{
-font-size:2rem;
-margin-top:20px;
-font-weight:bold;
-}
-
-.final{
-background:black;
-text-align:center;
-}
-
-.final h1{
-font-size:4rem;
-font-family:'Playfair Display',serif;
-margin-bottom:30px;
-}
-
-.final p{
-max-width:900px;
-font-size:1.4rem;
-line-height:2;
-}
-
-.heart{
-position:fixed;
-top:-20px;
-pointer-events:none;
-animation:fall linear forwards;
-z-index:999;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh);
-}
-}
-
-.fade{
-opacity:0;
-transform:translateY(50px);
-transition:all 1.5s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.scroll-text{
-margin-top:40px;
-font-size:14px;
-letter-spacing:3px;
-opacity:0.8;
-}
-
-</style>
-</head>
-<body>
-
-<section class="section hero">
-
-<h1>Happy Birthday ❤️</h1>
-
-<p>
-
-To the girl who unknowingly became the most beautiful part of my life.
-
-Today is not just your birthday.
-
-It is a celebration of every smile, every memory, every conversation and every beautiful chapter we have written together.
-
-</p>
-
-<div class="scroll-text">
-SCROLL DOWN ❤️
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>🌿 The Beginning</h2>
-
-<p>
-
-19 November 2021.
-
-Sari Village, Uttarakhand.
-
-Somewhere among the mountains and peaceful trails, I saw you for the first time.
-
-At that moment I didn't know what the future held.
-
-I didn't know that years later I would still remember that exact day and smile.
-
-I didn't know that a single moment could quietly become the beginning of my favourite story.
-
-</p>
 
 </div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>💬 The Conversation</h2>
-
-<p>
-
-6 December 2021.
-
-We started talking.
-
-A simple message.
-
-A simple conversation.
-
-Yet somehow those conversations became something I looked forward to every day.
-
-Without even realizing it, my day felt a little brighter whenever your name appeared on my screen.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>📞 The Voice</h2>
-
-<p>
-
-4 January 2022.
-
-Our first phone call.
-
-What seemed like just another call became a memory I would never forget.
-
-Because from that day onward, your voice became one of my favourite sounds.
-
-A voice that brought happiness on difficult days.
-
-A voice that slowly started feeling like home.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>🌍 Different Cities, One Story</h2>
-
-<p>
-
-In September 2020, you moved to London.
-
-Years later, in September 2023, I moved there too for university.
-
-At that time, you were living in Belfast.
-
-Life had every reason to keep us in different places.
-
-But somehow, our story kept moving forward.
-
-And one of the moments I cherish most is when you chose to move back to London.
-
-Not because you had to.
-
-But because you chose us.
-
-That gesture meant more than any gift ever could.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>❤️ Thank You</h2>
-
-<p>
-
-Thank you for every conversation.
-
-Thank you for every laugh.
-
-Thank you for every memory.
-
-Thank you for every moment you believed in us.
-
-Thank you for choosing to stay.
-
-Thank you for being you.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>⏳ Time Together</h2>
-
-<p>
-
-Since our first call on 4 January 2022…
-
-</p>
-
-<div class="counter" id="counter"></div>
-
-</div>
-
-</section>
-
-<section class="section fade">
-
-<div class="story">
-
-<h2>🎂❤️ Happy Birthday, My Love ❤️🎂</h2>
-
-<p>
-
-Every moment with you is special, and I feel incredibly lucky to have you by my side.
-
-I hope this year brings you endless happiness, success, good health, and all the beautiful things you deserve.
-
-May your smile always shine as brightly as it does today.
-
-No matter where life takes us, I'll always cherish every memory we've made and look forward to creating countless more together.
-
-Happy Birthday, sweetheart! 🎉🎁💖
-
-I love you more than words can say. ❤️
-
-</p>
-
-</div>
-
-</section>
-
-<section class="section final">
-
-<h1>❤️</h1>
-
-<p>
-
-Of all the places in the world...
-
-Of all the moments in time...
-
-Of all the roads life could have taken...
-
-I am grateful that our story began in Sari Village.
-
-And I am even more grateful that every chapter after that included you.
-
-Happy Birthday, My Love.
-
-Forever and Always. ❤️
-
-</p>
 
 </section>
 
 <script>
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-
-});
-
-});
-
-document.querySelectorAll(".fade")
-.forEach(el => observer.observe(el));
 
 const firstCall = new Date("2022-01-04");
 
@@ -380,8 +13,7 @@ const now = new Date();
 
 const diff = now - firstCall;
 
-const days =
-Math.floor(diff/(1000*60*60*24));
+const days = Math.floor(diff/(1000*60*60*24));
 
 document.getElementById("counter").innerHTML =
 days + " Beautiful Days ❤️";
@@ -389,7 +21,6 @@ days + " Beautiful Days ❤️";
 }
 
 setInterval(updateCounter,1000);
-
 updateCounter();
 
 function createHeart(){
@@ -400,10 +31,10 @@ heart.className = "heart";
 
 heart.innerHTML = "❤️";
 
-heart.style.left = Math.random()*100 + "vw";
+heart.style.left = Math.random()*100+"vw";
 
 heart.style.fontSize =
-(Math.random()*20+15)+"px";
+(Math.random()*18+14)+"px";
 
 heart.style.animationDuration =
 (Math.random()*5+4)+"s";
@@ -416,17 +47,26 @@ heart.remove();
 
 }
 
-setInterval(createHeart,350);
+setInterval(createHeart,300);
 
-setTimeout(()=>{
+const observer =
+new IntersectionObserver((entries)=>{
 
-confetti({
-particleCount:250,
-spread:180,
-origin:{y:0.6}
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
 });
 
-},1500);
+},{threshold:0.2});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
 
 </script>
 
